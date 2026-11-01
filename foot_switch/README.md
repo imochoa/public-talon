@@ -46,7 +46,7 @@ flowchart TB
 # On Linux, keys require using xmodmap to map the keys
 
 ```bash
-Xmodmap ~/.Xmodmap
+xmodmap ~/.Xmodmap
 ```
 
 ```
@@ -93,6 +93,6 @@ keycode 213 = F35 F35 F35
     - The above step can be achieved by importing [olympus_rs31h.xml](./olympus_rs31h.xml)
     - On Windows F-keys above F12 won't be visible in the tool, but works if imported
       ![Foot Switch Configuration Tool](https://github.com/AndreasArvidsson/andreas-talon/blob/master/core/foot_switch/foot_switch_configuration.png?raw=true)
-1. Add [foot_switch.talon](./foot_switch.talon) and [foot_switch.py](./foot_switch.py) to your Talon user directory
-1. My mouse scroll actions are not Knausj default. To utilize my implementation of mouse scroll with the foot switch you will need [mouse_scroll.py](../mouse/mouse_scroll.py)
+1. Add [foot_switch.talon](./foot_switch.talon), [foot_switch.py](./foot_switch.py) and [foot_switch_contexts.py](./foot_switch_contexts.py) to your Talon user directory
+1. The default context in [foot_switch_contexts.py](./foot_switch_contexts.py) uses actions from the [Talon community](https://github.com/talonhub/community) user set (`mouse_scroll_*_continuous`, `go_back`, `tab_close_wrapper`, `desktop_show`, ...), so install that too
 
