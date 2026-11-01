@@ -268,8 +268,8 @@ class FootswitchEyeTrackerActions:
 # enable/disable microphone/talon?
 # ------------------------------------------------------------------------------------------
 
-ctx_eye_tracker = Context()
-ctx_eye_tracker.matches = r"""
+ctx_mute = Context()
+ctx_mute.matches = r"""
 # tag: user.eye_tracker
 # tag: user.eye_tracker_frozen
 # mode: command
@@ -285,7 +285,7 @@ TOGGLE_MUTE = True
 # False -> hold to activate
 
 
-@ctx_eye_tracker.action_class("user")
+@ctx_mute.action_class("user")
 class FootswitchMuteActions:
     """
     So far only enables/disables talon and does not mute
